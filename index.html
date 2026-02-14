@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>For Haya</title>
+
+<style>
+body {
+  background: linear-gradient(to right, #ff758c, #ff7eb3);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  overflow: hidden;
+}
+
+.container {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 15px 30px;
+  font-size: 18px;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#yes {
+  background-color: #ff4d6d;
+  color: white;
+}
+
+#no {
+  background-color: gray;
+  color: white;
+  position: absolute;
+}
+
+#message {
+  margin-top: 20px;
+  font-size: 24px;
+  color: #ff4d6d;
+  font-weight: bold;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+  <h1>Haya, will you be my Valentine? ❤️</h1>
+
+  <button id="yes" onclick="yesClicked()">Yes</button>
+
+  <button id="no" onmouseover="moveNo()">No</button>
+
+  <div id="message"></div>
+</div>
+
+<script>
+function yesClicked() {
+  document.getElementById("message").innerHTML =
+  "I love you so much my whole life.";
+}
+
+function moveNo() {
+  var btn = document.getElementById("no");
+  btn.style.left = Math.random() * window.innerWidth + "px";
+  btn.style.top = Math.random() * window.innerHeight + "px";
+}
+</script>
+
+</body>
+</html>
